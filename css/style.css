@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700;900&display=swap");
+:root {
+    --blue: hsl(245, 75%, 52%);
+    --purple: hsl(245, 83%, 68%);
+    --light-purple: hsl(264, 100%, 71%);
+    --black: hsl(223, 47%, 23%);
+    --dark-grayish-blue: hsl(224, 23%, 55%);
+    --grayish-blue: hsl(225, 100%, 98%);
+    --light-grayish-blue: hsl(225, 100%, 94%);
+    --white: hsl(0, 0%, 100%);
+    --red-hat-display: "Red Hat Display";
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--red-hat-display), sans-serif;
+}
+
+body {
+    background: var(--light-grayish-blue);
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+}
+
+.card-wrapper {
+    background-color: var(--white);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.card-head img {
+    border-radius: 15px 15px 0 0;
+    height: auto;
+    width: 100%;
+}
+
+.content {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.card-body-top h1 {
+    font-weight: 900;
+    font-size: 23px;
+    margin-top: 30px;
+    color: var(--black);
+    text-align: center;
+}
+
+.card-body-top p {
+    color: var(--dark-grayish-blue);
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+.card-body-selection {
+    background: var(--grayish-blue);
+    border: 20px solid var(--grayish-blue);
+    border-radius: 15px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-content: center;
+}
+
+.card-body-selection img {
+    margin-right: 15px;
+    width: 20%;
+}
+
+.card-body-annual h1,
+.card-body-annual p,
+.card-body-selection a {
+    font-size: 14px;
+}
+
+.card-body-annual p {
+    color: var(--dark-grayish-blue);
+    margin-top: 5px;
+}
+
+.card-body-annual h1 {
+    font-weight: 900;
+    color: var(--black);
+}
+
+.card-body-selection a {
+    margin-left: auto;
+    align-self: center;
+    color: var(--purple);
+}
+
+.card-body-selection a:hover {
+    text-decoration: none;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+button {
+    box-shadow: 0 0.625rem 0.875rem -0.4375rem var(--blue);
+    background: var(--blue);
+    padding: 15px;
+    width: 100%;
+    border-radius: 15px;
+    color: var(--white);
+    align-self: center;
+    margin-top: 35px;
+    cursor: pointer;
+    border: none;
+    align-self: center;
+}
+
+button:hover {
+    background: linear-gradient(
+        to bottom,
+        var(--light-purple) 5%,
+        var(--light-purple) 100%
+    );
+    background-color: var(--purple);
+}
+
+.card-footer a {
+    color: var(--dark-grayish-blue);
+    margin-top: 35px;
+    text-decoration: none;
+    align-self: center;
+    padding-bottom: 40px;
+}
+
+.card-footer a:hover {
+    color: var(--black);
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width: 720px) {
+    .card-wrapper {
+        margin: auto;
+        width: 400px;
+    }
+
+    .card-body-top h1 {
+        font-size: 30px;
+    }
+
+    .card-body-top p {
+        font-size: 19px;
+    }
+}
